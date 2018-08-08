@@ -1,31 +1,27 @@
-<header>
-  <div class="flexbox">
-    <div class="center-on-mobiles">
-      <h1>
-        <a href="/" class="logo">
-          <span class="sr-only">Jekyll</span>
-          <img src="/img/logo-2x.png" width="140" height="65" alt="Jekyll Logo">
-        </a>
-      </h1>
-    </div>
-    <nav class="main-nav hide-on-mobiles">
-      {% include primary-nav-items.html %}
-    </nav>
-    <div class="search hide-on-mobiles">
-      {% include search/input.html %}
-    </div>
-    <div class="meta hide-on-mobiles">
-      <ul>
+<header class="header">
+  <div class="header__wrapper">
+    <a href="/" class="header__logo">
+      <img alt="$index-title" src="/img/logo.png" width="128" height="149"/>
+      <img class="header__logo-title" alt="Quarteera /// Russian Queer in Germany" src="/img/$main-logo-img-scr" width="320"/>
+    </a>
+
+    <div class="header__info">
+      <ul class="header__info_hold">
         <li>
-          <a href="{{ site.repository }}/releases/tag/v{{ site.version }}">v{{ site.version }}</a>
+          $header-info-official
         </li>
         <li>
-          <a href="{{ site.repository }}">GitHub</a>
+          $header-info-meet
+        </li>
+        <li>
+          <a href="donate.html" class="header__lnk-donate">$main-donation</a>
         </li>
       </ul>
+      <ul class="header__info_hold header__info_next">
+        <li><a class="header__contact_fb" href="https://www.facebook.com/Quarteera"><img alt="Quarteera at Facebook" src="/img/contact-fb.svg" width="19" height="25"/></a></li>
+        <li><a class="header__contact_vk" href="http://vk.com/quarteera"><img alt="Quarteera at VKontakte" src="/img/contact-vk.svg" width="39" height="25"/></a></li>
+      </ul>
+      <div class="header__info_hold header__info_last"><a href="$main-url-no-lang">$main-change-lang</a></div>
     </div>
   </div>
-  <nav class="mobile-nav show-on-mobiles">
-    {% include mobile-nav-items.html %}
-  </nav>
 </header>
