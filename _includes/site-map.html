@@ -1,0 +1,15 @@
+<nav class="footer__menu_nav">
+  <ul class="footer__menu_items">
+    {% for section in site.data.docs %}
+    <li><a href="$article.document.uri">{{ section.title }}</a>
+      <ul class="footer__menu_subitems">
+        {% for item in section.docs %}
+        {% assign item_url = item.permalink | prepend:"/docs/" | append:"/" %}
+        {% assign p = site.docs | where:"permalink", item_url | first %}
+        <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

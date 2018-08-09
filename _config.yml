@@ -1,29 +1,41 @@
+---
 title: Your awesome title
 email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: ssda
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
-
 # Build settings
 markdown: kramdown
 theme: minima
+collections:
+  docs:
+    permalink: "/:collection/:path/"
+    output: true
+defaults:
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
 plugins:
-  - jekyll-feed
-
+- jekyll-avatar
+- jekyll-feed
+- jekyll-mentions
+- jekyll-redirect-from
+- jekyll-seo-tag
+- jekyll-sitemap
+- jemoji
 sass:
   style: compressed
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
+exclude:
+   - Gemfile
+   - Gemfile.lock
+   - ".idea"
 #   - node_modules
 #   - vendor/bundle/
 #   - vendor/cache/

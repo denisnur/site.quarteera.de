@@ -1,0 +1,35 @@
+<div id="menu">
+  <div class="screen__tools">
+    <article>
+      <div class="tools__welcome">
+        <h1>Квартира</h1><p>Мы организация русскоговорящих геев, лесбиянок, бисексуалов, трансгендеров и их друзей в Германии.</p><p>Мы встречаемся каждую первую пятницу месяца в 19.00 по адресу Berlin, Kleiststr. 35 (LSVD)</p><p><a href="">Вступить в квартиру</a></p><p><a href="">Помочь нам</a></p>
+      </div>
+    </article>
+    <ul class="tools__items">
+      {% for section in site.data.docs %}
+      <li class="tools__item {{ section.styles }}"><a href="#{{ section.ref }}">
+        <span class="tools__item_col1"><img src="/img/tool-icon-custom.png" alt="Custom"></span>
+        <span class="tools__item_col2">{{ section.title }}</span> </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% for section in site.data.docs %}
+  <div id="{{ section.ref }}" class="screen__add {{ section.styles }}">
+    <h2>{{ section.title }}</h2>
+    <div class="item__title">
+      <img class="item__title_img" src="/img/title-{{ section.ref }}.png" alt="{{ section.title }}" width="150" height="100">
+      {% for item in section.docs %}
+      {% assign item_url = item.permalink | prepend:"/docs/" | append:"/" %}
+      {% assign p = site.docs | where:"permalink", item_url | first %}
+      <p><a href="{{ item.permalink }}">{{ item.title }}</a></p>
+      {% endfor %}
+    </div>
+    <div class="item__description">
+      {{ section.description }}
+      <br/>
+    </div>
+  </div>
+  {% endfor %}
+</div>

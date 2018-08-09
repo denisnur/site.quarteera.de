@@ -178,7 +178,7 @@ ul, ol
 {
     padding: 3px 0 3px;
     width: 100%;
-    background: url(/static/img/bg.jpg) center top repeat;
+    background: url(/img/bg.jpg) center top repeat;
     border-bottom: 5px solid #aaa;
 }
 
@@ -271,7 +271,7 @@ a.header__lnk-donate
 
 .footer
 {
-    background-image: url("/static/img/footer-logo.png"), url("../img/bg-footer.jpg");
+    background-image: url("/img/footer-logo.png"), url("/img/bg-footer.jpg");
     background-position: right bottom, center bottom;
     background-repeat: no-repeat, repeat-x;
     display: block;
@@ -339,7 +339,7 @@ a.header__lnk-donate
     position: absolute;
     right: 0;
     top: 0;
-    background-image: url("/static/img/screen-bg.jpg");
+    background-image: url("/img/screen-bg.jpg");
     background-position: center top;
     background-repeat: repeat-x;
 }

@@ -1,0 +1,16 @@
+- group: management
+  description: Мы организация русскоговорящих геев, лесбиянок, бисексуалов, трансгендеров и их друзей в Германии.</p><p>Мы встречаемся каждую первую пятницу месяца в 19.00 по адресу Berlin, Kleiststr. 35 (LSVD)
+  title: Правление
+  peoples:
+  - name: Wanja Kilber
+    permalink: wanya
+    email: wanja@quarteera.de
+    image: /img/people/wanya.jpg
+    title: Vorstandsvorsitzender
+    description: Visionär und treibende Kraft für Kontakt und Improvisation. Und immer in Bewegung.
+  - name: Gala Terekhova
+    permalink: gala
+    email: gala@quarteera.de
+    image: /img/people/gala.jpg
+    title: Vorstandsvorsitzender
+    description:
