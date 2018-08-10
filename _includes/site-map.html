@@ -3,7 +3,7 @@
     {% for section in site.data.docs %}
     <li><a href="$article.document.uri">{{ section.title }}</a>
       <ul class="footer__menu_subitems">
-        {% for item in section.docs %}
+        {% for item in section.top %}
         {% assign item_url = item.permalink | prepend:"/docs/" | append:"/" %}
         {% assign p = site.docs | where:"permalink", item_url | first %}
         <li><a href="{{ p.url }}">{{ p.title }}</a></li>
